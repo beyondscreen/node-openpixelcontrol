@@ -1,11 +1,11 @@
-# openpixelcontrol ![build-status](https://api.travis-ci.org/raspberry-node/node-openpixelcontrol.svg)
+# openpixelcontrol-stream ![build-status](https://api.travis-ci.org/raspberry-node/node-openpixelcontrol.svg)
 
 stream-based implementation of the [openpixelcontrol][]-protocol.
 Provides a protocol-parser and a client-implementation.
 
 ## installation
 
-    npm install openpixelcontrol
+    npm install openpixelcontrol-stream
 
 ## usage example
 

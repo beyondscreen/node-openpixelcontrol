@@ -1,5 +1,5 @@
 {
-  "name": "openpixelcontrol",
+  "name": "openpixelcontrol-stream",
   "version": "0.1.0",
   "description": "provides a stream-implementation for interfacing with the openpixelcontrol-protocol",
   "main": "index.js",
