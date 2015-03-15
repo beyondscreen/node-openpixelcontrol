@@ -1,13 +1,13 @@
 {
   "name": "openpixelcontrol",
   "version": "0.1.0",
-  "description": "provides stream-implementations for interfacing with the openpixelcontrol-protocol",
+  "description": "provides a stream-implementation for interfacing with the openpixelcontrol-protocol",
   "main": "index.js",
   "directories": {
+    "example": "examples",
     "test": "test"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "expect.js": "^0.3.1",
     "mocha": "^2.2.1",
@@ -16,6 +16,19 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Martin Schuhfuss <m.schuhfuss@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:raspberry-node/node-openpixelcontrol.git"
+  },
+  "keywords": [
+    "opc",
+    "openpixelcontrol",
+    "lighting"
+  ],
+  "bugs": {
+    "url": "https://github.com/raspberry-node/node-openpixelcontrol/issues"
+  },
+  "homepage": "https://github.com/raspberry-node/node-openpixelcontrol"
 }
