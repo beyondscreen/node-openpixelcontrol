@@ -1,0 +1,21 @@
+{
+  "name": "openpixelcontrol",
+  "version": "0.1.0",
+  "description": "provides stream-implementations for interfacing with the openpixelcontrol-protocol",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.1",
+    "sinon": "^1.14.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC"
+}
