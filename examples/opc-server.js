@@ -3,7 +3,7 @@ var ParseStream = require('../lib/opc-parse-stream'),
     ws281x = require('rpi-ws281x-native');
 
 
-var server = net.createServer(function(conn) {
+var server = net.createServer(function(socket) {
     var parser = new ParseStream({
         channel: 1,
         dataFormat: ParseStream.DataFormat.UINT32_ARRAY
@@ -13,7 +13,7 @@ var server = net.createServer(function(conn) {
         ws281x.render(data);
     });
 
-    conn.pipe(parser);
+    socket.pipe(parser);
 });
 
 ws281x.init(100);

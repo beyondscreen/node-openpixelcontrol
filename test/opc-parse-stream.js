@@ -96,6 +96,29 @@ describe('opc-parser', function() {
             });
         });
 
+        describe('streaming - multiple messages at once', function() {
+            it('should handle multiple messages', function() {
+                var msg = Buffer.concat([
+                    createOpcMessage(0x00, OpcParseStream.Commands.SETPIXELCOLORS,
+                        new Buffer([0xff,0xee,0xdd])),
+                    createOpcMessage(0x00, OpcParseStream.Commands.SETPIXELCOLORS,
+                        new Buffer([0x11,0x22,0x33]))
+                ]);
+
+                parser.write(msg);
+                expect(renderer.callCount).to.be(2);
+
+                sinon.assert.calledWith(
+                    renderer.getCall(1),
+                    sinon.match.instanceOf(Uint32Array)
+                        .and(sinon.match.has('length', 1))
+                        .and(sinon.match(function(arr) {
+                            return arr[0] === 0x112233;
+                        }, 'correct color-values'))
+                );
+            });
+        });
+
         describe('protocol - setPixelColors', function() {
             it('should accept broadcast setpixelcolor-messages', function() {
                 var colorData = new Buffer([0xff, 0x00, 0x00, 0x00, 0xff, 0x00]);
